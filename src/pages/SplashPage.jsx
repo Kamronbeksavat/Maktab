@@ -13,7 +13,7 @@ function SplashPage({ onEnter }) {
         </div>
         
         <span className="text-emerald-400 font-semibold tracking-widest uppercase text-sm mb-2">
-          O'zbekiston Respublikasi Portali
+          O'zbekiston Respublikasi
         </span>
         
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-white via-emerald-200 to-teal-200 bg-clip-text text-transparent">
