@@ -58,6 +58,26 @@ function Navbar({ activeSection, scrollTo, searchQuery, setSearchQuery, handleSe
 
           
 
+          {/* Desktop Nav & Audio Button */}
+          <div className="hidden md:flex items-center gap-6">
+            <div className="flex items-center gap-1">
+              {navLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollTo(link.id)}
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                    activeSection === link.id
+                      ? 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50'
+                      : 'text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400'
+                  }`}
+                >
+                  {link.label}
+                </button>
+              ))}
+            </div>
+
+            
+          </div>
 
           {/* Mobile menu button */}
           <div className="flex md:hidden items-center gap-3">
