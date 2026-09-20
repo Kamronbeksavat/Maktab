@@ -58,37 +58,6 @@ function Navbar({ activeSection, scrollTo, searchQuery, setSearchQuery, handleSe
 
           
 
-          {/* Desktop Nav & Audio Button */}
-          <div className="hidden md:flex items-center gap-6">
-            <div className="flex items-center gap-1">
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollTo(link.id)}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
-                    activeSection === link.id
-                      ? 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50'
-                      : 'text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400'
-                  }`}
-                >
-                  {link.label}
-                </button>
-              ))}
-            </div>
-
-            <button
-              onClick={toggleAudio}
-              className={`p-2.5 rounded-xl border flex items-center gap-2 text-sm font-medium transition-all cursor-pointer ${
-                isPlaying 
-                  ? 'bg-emerald-500 border-emerald-400 text-white shadow-lg shadow-emerald-500/20' 
-                  : 'bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300'
-              }`}
-              title={isPlaying ? "Madhiyani to'xtatish" : "Madhiyani ijro etish"}
-            >
-              {isPlaying ? <Volume2 className="w-4 h-4 animate-pulse" /> : <VolumeX className="w-4 h-4" />}
-              <span className="hidden lg:inline">{isPlaying ? "Madhiya yoqilgan" : "Madhiya"}</span>
-            </button>
-          </div>
 
           {/* Mobile menu button */}
           <div className="flex md:hidden items-center gap-3">
